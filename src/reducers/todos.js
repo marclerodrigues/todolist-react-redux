@@ -3,7 +3,7 @@ const todo = (state = {}, action) => {
     case 'ADD_TODO':
       return {
         id: action.id,
-        text: action.test,
+        text: action.text,
         completed: false
       }
     case 'TOGGLE_TODO':
@@ -22,7 +22,7 @@ const todos = (state = [], action) => {
     case 'ADD_TODO':
       return [
         ...state,
-        todo(undefined, action);
+        todo(undefined, action)
       ];
     case 'TOGGLE_TODO':
       return state.map(t => todo(t, action));
